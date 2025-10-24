@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>The Wedding Cici & Ciko</title>
+
+
+  
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --pink:#e91e63;
+      --pink-dark:#c2185b;
+      --muted:#6b6b6b;
+    }
+    *{box-sizing:border-box}
+   /* Background utama */
+body {
+  background-color: #fff;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Container utama undangan */
+.container {
+  background: linear-gradient(to bottom, #fff, #ffe6f0);
+  border-radius: 0; 
+  padding: 60px 100px;
+  box-shadow: none; 
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+}
+
+
+    
+    .hero-wrap{
+      background: linear-gradient( rgba(255,255,255,0.85), rgba(255,255,255,0.85) );
+      padding-top: 30px;
+      padding-bottom: 30px;
+      justify-content: center; /* Tengah  vertikal */
+      align-items: center;     /* Tengah  horizontal */
+    }
+
+    
+
+    /* Hero */
+    .hero{
+      display:grid;
+      grid-template-columns: 1fr 460px;
+      gap: 0;
+      align-items:center;
+      padding: 36px;
+    }
+
+    .hero-left{
+      padding: 30px 50px;
+    }
+
+    .hero h1{
+      font-family: 'Great Vibes', 'cursive';
+      font-size: 64px;
+      color: var(--pink);
+      margin: 0 0 10px 0;
+      line-height: 1;
+    }
+
+    .hero .lead {
+      font-size: 18px;
+      color: var(--muted);
+      margin-bottom: 18px;
+    }
+
+    .countdown{
+      display:flex;
+      gap:14px;
+      flex-wrap:wrap;
+      margin-top: 10px;
+      align-items:center;
+    }
+
+    .time-box{
+      min-width:84px;
+      background: #fff;
+      border: 2px solid rgba(0,0,0,0.04);
+      border-radius:10px;
+      padding: 10px 12px;
+      text-align:center;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+    }
+    .time-box .num{font-size:20px;font-weight:700;color:var(--pink);}
+    .time-box .lbl{display:block;font-size:12px;color:#666;margin-top:4px}
+
+    .hero-cta{
+      margin-top:18px;
+    }
+    .btn-primary-custom{
+      background: var(--pink);
+      border: none;
+      color: #ffffff;       /*WARNA TEKS KIRIM UCAPAN*/
+      padding: 10px 22px;
+      border-radius: 25px;
+      font-weight:600;
+      box-shadow: 0 6px 16px rgba(226, 48, 122, 0.12);
+    }
+    .btn-primary-custom:hover{background:var(--pink-dark)}
+
+    /* right column image & couple info */
+    .hero-right{
+      padding: 24px;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+    }
+
+    .couple-photo{
+      width: 220px;
+      height: 220px;
+      border-radius:50%;
+      object-fit:cover;
+      border: 6px solid #ffffff;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+    }
+    .couple-names{
+      margin-top: 14px;
+      font-size: 22px;
+      font-weight:600;
+      color: var(--pink-dark);
+      text-align:center;
+    }
+    .small-meta{font-size:13px;color:var(--muted);margin-top:6px;text-align:center}
+
+    /* 3-card story row */
+    .story{
+      padding: 36px;
+      display:flex;
+      gap:20px;
+      flex-wrap:wrap;
+      justify-content: center; /* Tengah secara vertikal */
+      align-items: center;     /* Tengah secara horizontal */
+}
+
+    .story .card{
+      flex:1 1 30%;
+      min-width:240px;
+      border-radius:12px;
+      padding:22px;
+      background:#fff;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+      text-align:center;
+    }
+    .story .card .ic{
+      width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg, #f8e7ef, #fff);
+      display:inline-flex;align-items:center;justify-content:center;margin-bottom:12px;font-size:22px;color:var(--pink);
+    }
+    .story h5{margin-top:6px;margin-bottom:8px}
+    .story p{color:var(--muted);font-size:14px}
+
+    /* details area */
+    .details{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:24px;
+      align-items:center;
+      padding: 36px;
+      background: linear-gradient(180deg,#fff,#fff);
+      justify-content: center; /* Tengah vertikal */
+      align-items: center;     /* Tengah horizontal */
+    }
+    .details .detail-text{padding:20px}
+    .detail-text h3{color:var(--pink);font-family:'Great Vibes',cursive;font-size:40px;margin-bottom:6px}
+    .detail-list p{margin:8px 0;color:var(--muted);font-size:16px}
+    .details .big-photo{
+      width:50%;
+      border-radius:10px;
+      overflow:hidden;
+      /* box-shadow: 0 8px 26px rgba(0,0,0,0.08); */
+      min-height: 100px;
+    }
+    .flower-right {
+  margin-left: 80px;
+  transition: all 0.5s ease;
+}
+
+    .details .big-photo img{width:100%;height:100%;object-fit:cover;display:block}
+
+    /* faq section */
+    .faq{
+      padding:36px;
+      justify-content: center; /* Tengah vertikal */
+      align-items: center;     /* Tengah horizontal */
+    }
+    .faq h4{color:var(--pink);margin-bottom:18px}
+    .accordion .accordion-button{color:var(--muted)}
+    .accordion .accordion-item{border-radius:10px;margin-bottom:10px;overflow:hidden}
+
+    /* send wishes */
+    .wishes{
+  background: linear-gradient(to bottom, #fff, #ffe6f0); /* gradasi pink putih */
+  border-radius: 15px;
+  padding: 40px;
+  /* box-shadow: 0 0 15px rgba(0,0,0,0.1); */
+  justify-content: center; /* Tengah secara vertikal */
+  align-items: center;     /* Tengah secara horizontal */
+  margin-top: 60px; /* atur jarak atas, bisa 40–100px sesuai selera */
+
+    }
+    .wishes .form{
+      flex:1 1 55%;
+      min-width:300px;
+    }
+    .wishes .preview{
+      flex:1 1 35%;
+      min-width:250px;
+      text-align:center;
+
+
+    }
+    .footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  color: #444;
+  
+}
+
+.footer .social-links {
+  margin-top: 8px;
+}
+
+.footer .social {
+  display: inline-flex;
+  align-items: center;
+  color: var(--pink);
+  margin: 0 10px;
+  text-decoration: none;
+  transition: transform 0.2s ease, color 0.3s ease;
+}
+
+.footer .social svg {
+  margin-right: 6px;
+  vertical-align: middle;
+}
+
+.footer .social:hover {
+  color: #ff4081;
+  transform: translateY(-2px);
+    }
+   .gallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: -60px;
+}
+
+.gallery img {
+  position: relative;
+  display: inline-block;
+  border-radius: 15px;
+  width: 140px;
+  height: auto;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.4s ease;
+}
+
+/* efek zoom halus */
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* efek cahaya bergerak */
+.gallery img::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255,255,255,0) 0%,
+    rgba(255,255,255,0.4) 50%,
+    rgba(255,255,255,0) 100%
+  );
+  transition: left 0.8s ease;
+  pointer-events: none; /* penting biar gak bentrok sama hover */
+}
+
+/* saat hover — kilau jalan */
+.gallery img:hover::after {
+  left: 120%;
+}
+
+
+    /* small screens */
+    @media (max-width: 992px){
+      .hero{grid-template-columns: 1fr;}
+      .hero-left{padding:18px}
+      .hero-right{padding: 6px 18px 18px}
+      .details{grid-template-columns:1fr; padding:24px}
+      .story{padding:24px}
+      .wishes{padding:24px}
+      /* .site-card{margin:16px} */
+      .hero h1{font-size:48px}
+    }
+  </style>
+</head>
+<body>
+
+
+
+  <!--HTML-->
+  <div class="site-card">
+
+    <!-- HERO -->
+    <div class="hero-wrap">
+      <div class="hero">
+        <div class="hero-left">
+          <h1>Cici &amp; Ciko</h1>
+          <p class="lead">Dengan memohon rahmat dan ridho Allah SWT, kami mengundang Bapak/Ibu/Saudara/i untuk hadir pada acara pernikahan kami.</p>
+          
+          
+          
+          
+          
+          <!-- countdown (days/hours/minutes/seconds) -->
+          <div class="countdown" id="countdownArea">
+            <div class="time-box">
+              <div class="num" id="days">20</div>
+              <div class="lbl">HARI</div>
+            </div>
+            <div class="time-box">
+              <div class="num" id="hours">10</div>
+              <div class="lbl">JAM</div>
+            </div>
+            <div class="time-box">
+              <div class="num" id="minutes">45</div>
+              <div class="lbl">MENIT</div>
+            </div>
+            <div class="time-box">
+              <div class="num" id="seconds">30</div>
+              <div class="lbl">DETIK</div>
+            </div>
+          </div>
+          
+          <script src="https://cdn.jsdelivr.net/npm/simplycountdown.js"></script>
+          <!--end countdown-->
+          <div class="hero-cta">
+            <a href="#details" class="btn btn-primary-custom">Lihat Detail</a>
+            <button class="btn btn-outline-secondary ms-2" onclick="closeOverlay()">Tutup</button>
+          </div>
+        </div>
+        
+       
+
+        <div class="hero-right">
+          <img src="./ciko.jpeg" alt="Cici & Ciko" class="couple-photo">
+          <div class="couple-names">Cici &amp; Ciko</div>
+          <div class="small-meta">11 Oktober 2025 08.00 - 10.00 WIB</div>
+        </div>
+      </div>
+    </div>
+    
+
+    
+    <!-- STORY (3 cards) -->
+    <div class="story container">
+      <div class="card">
+        <div class="ic"><i class="bi bi-chat-fill"></i></div>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+        <h5>Awal Pertemuan</h5>
+        <p>Kisah kami dimulai dari pertemuan yang sederhana—dua hati bertemu dan saling mengenal sedikit demi sedikit.</p>
+      </div>
+
+      <div class="card">
+      <div class="ic"><i class="bi bi-chat-heart-fill"></i></div>
+        <h5>Lamaranku</h5>
+        <p>Lamaran yang penuh haru dan doa, menjadi titik awal persiapan menuju hari bahagia kami.</p>
+      </div>
+
+      <div class="card">
+        <div class="ic"><i class="bi bi-chat-heart-fill"></i></div>
+        <h5>Hari Bahagia</h5>
+        <p>Doakan agar acara kami berjalan khidmat. Kami berharap Bapak/Ibu/Saudara/i dapat hadir untuk memberi restu.</p>
+      </div>
+    </div>
+
+    <!-- DETAILS -->
+    <div id="details" class="details">
+      <div class="detail-text">
+        <h3>Detail Acara</h3>
+        <div class="detail-list">
+          <p><strong>Tanggal:</strong> Sabtu, 11 Oktober 2025</p>
+          <p><strong>Waktu Akad:</strong> 08.00 - 10.00 WIB</p>
+          <p><strong>Lokasi:</strong> Gedung Serbaguna — Jl. Bintang Jatuh Blok M No. 101, RT 01 RW 05, Desa Langit, Kecamatan Angkasa, Kabupaten Semesta</p>
+          <p><strong>Pakaian:</strong> Batik atau Pakaian Formal</p>
+        </div>
+
+        <div style="margin-top:14px">
+          <a href="#wishes" class="btn btn-primary-custom">Kirim Ucapan</a>
+          <a href="#" class="btn btn-outline-secondary ms-2" onclick="openMaps()">Buka di Maps</a>
+        </div>
+      </div>
+
+      <div class="big-photo">
+ <div class="preview animate__animated animate__fadeInUp" style="display: flex; justify-content: flex-end;">
+ 
+</div>
+
+  </div>
+</div>
+
+    <!-- FAQ -->
+    <div class="faq container">
+      <h4>Detail Dresscode</h4>
+      <div class="accordion" id="faqAccordion">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="faqHeadingOne">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqOne" aria-expanded="false" aria-controls="faqOne">
+              Dresscode / Pakaian
+            </button>
+          </h2>
+          <div id="faqOne" class="accordion-collapse collapse" aria-labelledby="faqHeadingOne" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Dianjurkan memakai batik atau pakaian formal. Mohon hindari warna putih penuh agar tidak mengganggu pengantin.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="faqHeadingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqTwo" aria-expanded="false" aria-controls="faqTwo">
+              Parkir & Akses
+            </button>
+          </h2>
+          <div id="faqTwo" class="accordion-collapse collapse" aria-labelledby="faqHeadingTwo" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Tersedia area parkir sekitar gedung. Mohon datang lebih awal untuk memudahkan.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="faqHeadingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqThree" aria-expanded="false" aria-controls="faqThree">
+              Kado / Amplop
+            </button>
+          </h2>
+          <div id="faqThree" class="accordion-collapse collapse" aria-labelledby="faqHeadingThree" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Kehadiran Bapak/Ibu/Saudara/i adalah karunia terindah bagi kami. Jika ingin memberi kado, silakan ditempatkan pada meja resepsi.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SEND WISHES -->
+    <div id="wishes" class="wishes container">
+      <div class="form">
+        <h4>Kirim Ucapan & Doa</h4>
+        <p class="small" style="color:var(--muted)">Tinggalkan nama dan pesan untuk memeriahkan hari kami.</p>
+
+        <form id="wishForm" onsubmit="submitWish(event)">
+          <div class="mb-3">
+            <input type="text" id="name" class="form-control" placeholder="Nama Anda" required>
+          </div>
+          <div class="mb-3">
+            <input type="email" id="email" class="form-control" placeholder="Email (opsional)">
+          </div>
+          <div class="mb-3">
+            <textarea id="message" class="form-control" rows="4" placeholder="Pesan / Doa untuk kami..." required></textarea>
+          </div>
+          <div>
+            <button class="btn btn-primary-custom" type="submit">Kirim Ucapan</button>
+            <button class="btn btn-outline-secondary ms-2" type="button" onclick="resetForm()">Reset</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="preview" style="text-align:center;">
+  <!-- <img src="./flowers.png" alt="flower" -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+
+
+      </div>
+    </div>
+
+    <!-- footer -->
+    <div class="footer">
+  <div>Cici &amp; Ciko 2025 — Terima kasih atas doa & kehadiranmu</div>
+  <div class="social-links">
+    <a href="#" title="Instagram" class="social">
+      <!-- Instagram Icon -->
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
+        class="bi bi-instagram" viewBox="0 0 16 16">
+        <path
+          d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
+      </svg>
+      Instagram
+    </a>
+
+    <a href="#" title="Facebook" class="social">
+      <!-- Facebook Icon -->
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
+        class="bi bi-facebook" viewBox="0 0 16 16">
+        <path
+          d="M8.94 8.5H7.5v7h2.69v-7H12l.4-2.8H10.2V4.45c0-.81.23-1.36 1.42-1.36h.89V.34A11.93 11.93 0 0 0 10.64 0C8.68 0 7.5 1.08 7.5 3.06v2.64H6v2.8h1.5v7z" />
+      </svg>
+      Facebook
+    </a>
+
+    <a href="#" title="WhatsApp" class="social">
+      <!-- WhatsApp Icon -->
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
+        class="bi bi-whatsapp" viewBox="0 0 16 16">
+        <path
+          d="M13.601 2.326A7.928 7.928 0 0 0 8.02 0C3.588 0 0 3.588 0 8.02c0 1.414.369 2.793 1.07 4.01L.08 16l4.067-1.066A7.972 7.972 0 0 0 8.02 16c4.433 0 8.02-3.588 8.02-8.02 0-2.137-.832-4.148-2.34-5.654zM8.02 14.61c-1.198 0-2.366-.32-3.385-.926l-.24-.14-2.412.632.646-2.35-.156-.242a6.59 6.59 0 0 1-1.008-3.564c0-3.645 2.967-6.612 6.612-6.612a6.55 6.55 0 0 1 4.667 1.945A6.548 6.548 0 0 1 14.63 8.02c0 3.645-2.967 6.59-6.61 6.59zm3.74-4.93c-.2-.1-1.176-.578-1.357-.645-.182-.066-.315-.1-.447.1-.132.199-.513.645-.627.778-.115.132-.232.15-.432.05-.2-.1-.842-.31-1.602-.99a5.93 5.93 0 0 1-1.09-1.355c-.115-.199-.012-.307.087-.406.09-.09.2-.232.3-.348.1-.116.132-.199.2-.332.066-.132.033-.249-.017-.348-.05-.1-.447-1.08-.612-1.48-.162-.39-.327-.337-.447-.342l-.382-.007c-.133 0-.348.05-.53.249-.183.2-.7.683-.7 1.665 0 .983.717 1.934.817 2.066.1.132 1.412 2.157 3.426 3.025.48.208.855.332 1.146.425.48.153.918.132 1.264.08.385-.058 1.176-.48 1.342-.944.165-.465.165-.864.115-.944-.05-.082-.183-.133-.382-.232z" />
+      </svg>
+      WhatsApp
+    </a>
+  </div>
+</div>
+
+
+  </div>
+
+
+
+
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- AOS (animasi saat scroll) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"/>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+<!-- SimplyCountdown (timer otomatis) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplycountdown.js/dist/simplyCountdown.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/simplycountdown.js/dist/simplyCountdown.min.js"></script>
+
+<script>
+  //  Inisialisasi animasi AOS
+  AOS.init();
+
+  //  Countdown otomatis pakai simplyCountdown
+
+  // Inisialisasi animasi AOS
+  AOS.init();
+
+  // Countdown otomatis (real-time berjalan mundur)
+  const targetDate = new Date("October 11, 2045 08:00:00").getTime();
+
+  const countdownInterval = setInterval(() => {
+    const now = new Date().getTime();
+    const distance = targetDate - now;
+
+    if (distance <= 0) {
+      clearInterval(countdownInterval);
+      document.getElementById("days").innerText = "00";
+      document.getElementById("hours").innerText = "00";
+      document.getElementById("minutes").innerText = "00";
+      document.getElementById("seconds").innerText = "00";
+      return;
+    }
+
+    // Hitung sisa waktu
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    // Update tampilan countdown tiap detik
+    document.getElementById("days").innerText = String(days).padStart(2, "0");
+    document.getElementById("hours").innerText = String(hours).padStart(2, "0");
+    document.getElementById("minutes").innerText = String(minutes).padStart(2, "0");
+    document.getElementById("seconds").innerText = String(seconds).padStart(2, "0");
+  }, 1000);
+
+  //  Form submit (frontend only)
+  function submitWish(e){
+    e.preventDefault();
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
+
+    if(!name || !message){
+      alert('Mohon isi nama dan pesan.');
+      return;
+    }
+
+    alert('Terima kasih, ' + name + '! Pesanmu sudah kami terima.');
+    document.getElementById('wishForm').reset();
+  }
+
+  function resetForm(){
+    document.getElementById('wishForm').reset();
+  }
+
+  //  Buka Google Maps
+  function openMaps(){
+    const query = encodeURIComponent('Gedung Serbaguna Jl. Bintang Jatuh Blok M No. 101, Desa Langit');
+    window.open('https://www.google.com/maps/search/?api=1&query=' + query, '_blank');
+  }
+
+  //  Tutup overlay (scroll ke bawah)
+  function closeOverlay(){
+    window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+  }
+  //  Form submit (frontend only)
+  function submitWish(e){
+    e.preventDefault();
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
+
+    if(!name || !message){
+      alert('Mohon isi nama dan pesan.');
+      return;
+    }
+
+    alert('Terima kasih, ' + name + '! Pesanmu sudah kami terima.');
+    document.getElementById('wishForm').reset();
+  }
+
+  function resetForm(){
+    document.getElementById('wishForm').reset();
+  }
+
+  // Buka Google Maps
+  function openMaps(){
+    const query = encodeURIComponent('Gedung Serbaguna Jl. Bintang Jatuh Blok M No. 101, Desa Langit');
+    window.open('https://www.google.com/maps/search/?api=1&query=' + query, '_blank');
+  }
+
+  //  Tutup overlay (scroll ke bawah)
+  function closeOverlay(){
+    window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+  }
+  
+</script>
+</body>
+</html>
